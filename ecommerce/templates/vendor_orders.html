@@ -1,0 +1,12 @@
+<h2>Vendor Orders</h2>
+
+{% for order in orders %}
+    <p>
+        Product: {{ order.product.name }} |
+        Buyer: {{ order.user.username }} |
+        Quantity: {{ order.quantity }} |
+        Status: {{ order.status }}
+    </p>
+{% empty %}
+    <p>No orders received.</p>
+{% endfor %}
